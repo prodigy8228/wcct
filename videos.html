@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weathercraft Charitable Trust | Crafting Care, Changing Lives.</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="wcct-style.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<div id="pageContentWrapper">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-baseline" href="wcct.html">
+  <img src="logo1.png" style="width:200px; height:50px;" class="me-2" /> 
+  <span style="position: relative; bottom: 5px;">Charitable Trust</span>
+</a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item"><a class="nav-link" href="wcct.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="videos.html">Video</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                    <a href="donate.html" class="btn btn-gold">Support Our Mission</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<section class="video-section">
+  <div class="container">
+    <h2 class="section-title">Our Video Gallery</h2>
+    
+    <div class="video-circle-grid">
+  <!-- Card 1 -->
+  <div class="video-circle-card" onclick="openVideoLightbox(this)">
+    <video src="videos/video1.mp4" muted loop playsinline></video>
+    <div class="video-hover-info">
+      <div class="play-icon">▶</div>
+      <span>Watch Rescue Video</span>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="video-circle-card" onclick="openVideoLightbox(this)">
+    <video src="videos/video2.mp4" muted loop playsinline></video>
+    <div class="video-hover-info">
+      <div class="play-icon">▶</div>
+      <span>Watch feeding birds Video</span>
+    </div>
+  </div>
+  <!-- Card 3 -->
+  <div class="video-circle-card" onclick="openVideoLightbox(this)">
+    <video src="videos/video3.mp4" muted loop playsinline></video>
+    <div class="video-hover-info">
+      <div class="play-icon">▶</div>
+      <span>Watch rabbits enjoying fun Video</span>
+    </div>
+  </div>
+ <!-- Card 4 -->
+  <div class="video-circle-card" onclick="openVideoLightbox(this)">
+    <video src="videos/video4.mp4" muted loop playsinline></video>
+    <div class="video-hover-info">
+      <div class="play-icon">▶</div>
+      <span>Watch Goat grazing Video</span>
+    </div>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="video-circle-card" onclick="openVideoLightbox(this)">
+    <video src="videos/video5.mp4" muted loop playsinline></video>
+    <div class="video-hover-info">
+      <div class="play-icon">▶</div>
+      <span>Watch birds in shelter Video</span>
+    </div>
+  </div>
+  <!-- Card 6 -->
+  <div class="video-circle-card" onclick="openVideoLightbox(this)">
+    <video src="videos/video6.mp4" muted loop playsinline></video>
+    <div class="video-hover-info">
+      <div class="play-icon">▶</div>
+      <span>Watch birds enjoying nature Video</span>
+    </div>
+  </div>     
+      <!-- Repeat this card block structure for cards 4 through 9 -->
+    </div>
+  </div>
+</section>
+
+<!-- Video Popup Modal Overlay -->
+<div id="videoLightbox" class="video-lightbox-overlay">
+  <span class="video-close-btn" onclick="closeVideoLightbox()">&times;</span>
+  <div class="video-content-wrapper">
+    <!-- Controls added here so users can play/pause and unmute the popup video -->
+    <video id="lightboxMainVideo" src="" controls autoplay></video>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<footer class="py-5" id="footer">
+
+<div class="container text-center">
+
+<h2 class="accent mb-3">
+Weathercraft Charitable Trust
+</h2>
+
+<p class="text-muted-custom mb-4">
+Crafting Care, Changing Lives.
+</p>
+
+<div class="social mb-4">
+<a href="#">Facebook</a>
+<a href="#">Instagram</a>
+<a href="#">Email</a>
+<a href="#">Volunteer</a>
+</div>
+
+<p class="small text-secondary mb-0">
+© 2026 Weathercraft Charitable Trust. Every act of kindness creates hope.
+</p>
+
+</div>
+
+</footer>
+</div>
+<!-- Video Popup Modal Overlay -->
+<div id="videoLightbox" class="video-lightbox-overlay">
+  <span class="video-close-btn" onclick="closeVideoLightbox()">&times;</span>
+  <div class="video-content-wrapper">
+    <!-- Controls added here so users can play/pause and unmute the popup video -->
+    <video id="lightboxMainVideo" src="" controls autoplay></video>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+},{threshold:.15});
+
+document.querySelectorAll(".fade-up").forEach(el=>{
+    observer.observe(el);
+});
+// 1. Handle hover play/pause effects automatically across all cards
+document.querySelectorAll('.video-square-card').forEach(card => {
+  const video = card.querySelector('video');
+  
+  card.addEventListener('mouseenter', () => {
+    video.play().catch(error => {
+      // Catches and handles browser autoplay block protections gracefully
+      console.log("Hover auto-play blocked or delayed:", error);
+    });
+  });
+  
+  card.addEventListener('mouseleave', () => {
+    video.pause();
+    video.currentTime = 0; // Rewinds clip back to start frame
+  });
+});
+
+// 2. Open Video Popup Logic
+function openVideoLightbox(element) {
+  const videoUrl = element.querySelector('video').src;
+  const lightboxVideo = document.getElementById('lightboxMainVideo');
+  
+  lightboxVideo.src = videoUrl;
+  document.getElementById('videoLightbox').style.display = 'flex';
+  document.body.style.overflow = 'hidden'; // Freeze main site scrolling behind modal
+}
+
+// 3. Close Video Popup Logic
+function closeVideoLightbox() {
+  const lightboxVideo = document.getElementById('lightboxMainVideo');
+  
+  lightboxVideo.pause(); // Crucial: stops audio track from playing after closing
+  lightboxVideo.src = ""; // Clears cache track source links
+  
+  document.getElementById('videoLightbox').style.display = 'none';
+  document.body.style.overflow = 'auto'; // Release window scroll lock
+}
+
+// 4. Modal Backdrop Close Click Trigger
+window.addEventListener('click', function(event) {
+  const modal = document.getElementById('videoLightbox');
+  if (event.target === modal) {
+    closeVideoLightbox();
+  }
+});
+
+</script>
+
+</body>
+</html>

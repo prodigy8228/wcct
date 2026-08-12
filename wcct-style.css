@@ -1,0 +1,666 @@
+:root {
+  --bg: #faf7f2; /* Very light premium cream background */
+  --bg2: #f3eee4; /* Soft almond-cream background variation */
+  --card: #ffffff; /* Crisp pure white for cards to pop off the cream background */
+  --gold: #b35933; /* Deep rust accent (darkened slightly for readability on light backgrounds) */
+  --gold-soft: #c86b45; /* Vibrant rust-copper accent for subtitles and highlights */
+  --text: #1e1916; /* Deep espresso-charcoal text for high contrast and readability */
+  --muted: #6e655f; /* Mid-tone warm gray for secondary text and labels */
+  --border: rgba(
+    179,
+    89,
+    51,
+    0.12
+  ); /* Subtle rust-tinted borders for containers */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 0.5px;
+}
+
+.navbar {
+  backdrop-filter: blur(14px);
+  background: #f4e8e1;
+  /* Soft warm-gray border to separate navbar from content */
+  border-bottom: 1px solid rgba(30, 25, 22, 0.08);
+}
+
+.navbar-brand {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.7rem;
+  /* Rich rust color for the company logo text */
+  color: #b35933 !important;
+}
+
+.nav-link {
+  /* Deep espresso-charcoal text for high contrast on cream */
+  color: #1e1916 !important;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  /* Transitions smoothly to deep rust on hover */
+  color: #b35933 !important;
+}
+
+/* Deep, Muted Earthy Dark Rust Background */
+.hero-card-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  /* Forces crisp rendering on high-res photos */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.hero-card-body {
+  padding: 25px;
+}
+
+/* Deep, Muted Earthy Dark Rust Background */
+.hero-clean {
+  background-color: #be7459; /*#5c2d1b; Deep burnt sienna/dark rust tone */
+  padding: 80px 0;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Right Side Image Card Styling (Slightly lighter, richer rust layer to create depth) */
+.hero-image-card {
+  background: #f4eade; /* A beautiful warm desert sand tone that stands out against the rust */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(61, 29, 18, 0.2); /* Deep warm-toned drop shadow */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Typography Enhancements for High Visibility against Rust */
+.hero-clean .tagline {
+  color: #3d1c10; /* Deep espresso brown accent text for high contrast */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.95rem;
+}
+
+.hero-clean h1.accent {
+  color: #ffffff; /* Clean white for primary headline visibility */
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hero-clean .text-muted-custom {
+  color: #ffffff !important; /* Pure white body text */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.95; /* Slight transparency to make it soft on the eyes */
+}
+
+/* Card Interior Text Colors (Adjusted for the Desert Sand Card Background) */
+.hero-image-card .hero-card-body h3 {
+  color: #3d1c10; /* Deep dark brown title inside the sand card */
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+.hero-image-card .text-muted-custom.small {
+  color: #5c453d !important; /* Soft earthy brown for descriptive card text */
+  font-size: 0.9rem;
+}
+
+.border-light-custom {
+  border-color: rgba(
+    61,
+    29,
+    18,
+    0.15
+  ); /* Darker dividing rule line inside the card */
+}
+
+.hero-image-card .accent {
+  color: #9c4c30; /* Rich rust-orange color for the 24/7, 100%, and ∞ counters */
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Buttons Polish */
+.btn-gold {
+  background-color: #3d1c10; /* Dark espresso button that instantly catches the eye */
+  color: #ffffff;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  border: none;
+}
+.btn-gold:hover {
+  background-color: #ffffff;
+  color: #3d1c10;
+}
+
+.btn-outline-dark {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-outline-dark:hover {
+  background-color: #ffffff;
+  color: #be7459;
+}
+
+.section {
+  padding: 110px 0;
+}
+
+.stories-section {
+  padding: 5rem 2rem;
+  background-color: #f4e8e1; /* Main light theme background */
+}
+.accent {
+  color: var(--gold);
+}
+
+.about-box {
+  background: linear-gradient(180deg, #f4e8e1, #e8dad1);
+  border-radius: 28px;
+  padding: 3rem;
+  border: 1px solid var(--border);
+}
+
+.stat {
+  border-left: 2px solid var(--gold);
+  padding-left: 1rem;
+}
+
+.testimonial {
+  background: var(--card);
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  padding: 2rem;
+  height: 100%;
+}
+
+footer {
+  /* Soft, warm clay-rust background */
+  background: #f4e8e1;
+  /* Clean border using a deeper shade of rust for separation */
+  border-top: 1px solid rgba(179, 89, 51, 0.15);
+  padding: 3rem 0; /* Ensures consistent padding spacing */
+}
+
+.social a {
+  text-decoration: none;
+  /* Deep espresso-charcoal text for high contrast and readability */
+  color: #2b1610;
+  margin-right: 18px;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  /* Changes to a rich, vibrant rust color when hovered */
+  color: #b35933;
+  transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: none;
+}
+
+.text-muted-custom {
+  color: var(--text);
+}
+
+/* Section Container Styling */
+.image-gallery-section {
+  padding: 6.5rem 2rem;
+  background-color: #f4e8e1; /* Matches your light background choice */
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+/* 3x3 Fixed Grid Layout */
+.image-square-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.image-square-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  cursor: pointer;
+  background: #b35933; /* Dark baseline backing so image fades into darkness */
+}
+
+.image-square-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease, transform 0.4s ease;
+
+  /* --- IMAGE QUALITY IMPROVEMENTS --- */
+  image-rendering: -webkit-optimize-contrast; /* Forces crisp contrast in Chrome/Safari */
+  image-rendering: crisp-edges; /* Prevents blur in Firefox */
+  backface-visibility: hidden; /* Fixes micro-blur during hover animations */
+  transform: translateZ(0); /* Forces hardware acceleration for crispness */
+
+  /* Subtle adjustment to bring out textures in animal fur or bird feathers */
+  filter: contrast(1.04) brightness(1.02) saturate(1.02);
+}
+
+/* Fades out the image transparency only when hovering directly over it */
+.image-square-card:hover img {
+  opacity: 0.3; /* Lower this number to fade out more, raise it to fade out less */
+}
+
+.image-square-grid .image-square-card:hover {
+  opacity: 1; /* Keeps the currently hovered image perfectly bright */
+}
+
+#pageContentWrapper {
+  transition: opacity 0.3s ease, filter 0.4s ease;
+  opacity: 1;
+}
+
+/* Applied via JS when the big image is active */
+.content-faded {
+  opacity: 0.15; /* Makes page content nearly transparent */
+  filter: blur(2px); /* Optional: adds a slight blur for depth */
+  pointer-events: none; /* Disables clicking behind the modal */
+}
+
+/* Lightbox overlay remains 100% visible on top */
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.85
+  ); /* Slightly translucent black backdrop */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Enlarged Main Display Image */
+.lightbox-content {
+  max-width: 90%;
+  max-height: 70%;
+  object-fit: contain;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Close Icon Button */
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Contact Section Framework */
+.contact-section {
+  padding: 5rem 2rem;
+  background-color: #f4e8e1; /* Main light theme background */
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Balanced two-column split */
+  gap: 3.5rem;
+  background: #f4e8e1; /* #fbf6f4 Ultra-light off-white background card backing */
+  border-radius: 24px;
+  padding: 3.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+/* Left Panel Content Styling */
+.contact-info-panel h2 {
+  color: #1a1a1a;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.contact-info-panel p {
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  color: #333333;
+}
+
+.info-item strong {
+  color: #b35933; /* Dark theme accent */
+  margin-bottom: 0.2rem;
+}
+
+/* Right Panel Form Fields Styling */
+.home-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(179, 89, 51, 0.2); /* Tinted subtle borders */
+  border-radius: 10px;
+  background-color: #ffffff;
+  font-size: 1rem;
+  color: #333333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Highlight input boxes on focus selection */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #b35933;
+  box-shadow: 0 0 0 4px rgba(179, 89, 51, 0.1);
+}
+
+/* Interactive Theme Submit Button */
+.submit-contact-btn {
+  background-color: #b35933;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  align-self: flex-start; /* Matches button size to its content text */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-contact-btn:hover {
+  background-color: #964725; /* Deeper hover tone */
+  transform: translateY(-2px);
+}
+
+/* The main card container */
+.feature-square-card {
+  background: #ffffff; /* Clean white card backing */
+  border-radius: 8px;
+  overflow: hidden; /* Clips image corners to match the border-radius */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Soft elevation shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%; /* Ensures all cards in the row remain the same height */
+  border: 1px solid #eaeaea;
+}
+
+/* Subtle lift animation when a user hovers over the card */
+.feature-square-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Forces the top image container into a perfect square aspect ratio */
+.feature-image-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Makes it a perfect square */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Stretches the rescue photo to fill the square space cleanly without distortion */
+.feature-square-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crops the photo evenly to fill the square */
+
+  /* High-definition image rendering fixes */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Inside text padding spacing */
+.feature-card-body {
+  padding: 20px;
+}
+
+.feature-card-body h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a252f; /* Deep dark text for standard readability alignment */
+}
+
+.feature-card-body .text-muted-custom {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #5a6a85 !important; /* Soft gray for description body text */
+  margin-bottom: 0;
+}
+
+.video-section {
+    padding: 7rem 2rem;
+    background-color: #f4e8e1; /* Main light theme background */
+    text-align:center;
+}
+
+
+/* CSS Play Button Circle Graphic */
+.play-icon {
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b35933;
+    font-size: 18px;
+    padding-left: 4px; /* Centers the triangular play pointer arrow perfectly */
+    margin-bottom: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.video-hover-info span {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.video-lightbox-overlay {
+  display: none; 
+  position: fixed;
+  z-index: 10000; /* Stays securely on top of header assets */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  align-items: center;
+  justify-content: center;
+}
+
+.video-content-wrapper {
+  width: 80%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9; /* Standard cinematic presentation ratio */
+}
+
+.video-content-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.video-close-btn {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: #ffffff;
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+#pageContentWrapper {
+    transition: opacity 0.3s ease, filter 0.4s ease;
+    opacity: 1;
+}
+
+/* Applied via JS when the big image is active */
+.content-faded {
+    opacity: 0.15; /* Makes page content nearly transparent */
+    filter: blur(2px); /* Optional: adds a slight blur for depth */
+    pointer-events: none; /* Disables clicking behind the modal */
+}
+
+
+
+.video-circle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+  gap: 50px;
+}
+
+/* The Circle Card */
+.video-circle-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;      /* Forces the card to be a perfect square before rounding */
+  border-radius: 50%;       /* Turns the square into a perfect circle */
+  overflow: hidden;         /* Hides the video corners stretching outside the circle */
+  cursor: pointer;
+  -webkit-mask-image: -webkit-radial-gradient(white, black); /* Fixes Safari overflow-radius bug */
+}
+
+/* The Video Element Inside */
+.video-circle-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* Prevents the video from stretching or distorting */
+  border-radius: 50%;
+}
+
+/* Hover Overlay Styles */
+.video-hover-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-circle-card:hover .video-hover-info {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 0;
+  }
+  .section-title {
+    font-size: 2.3rem;
+  }
+  .hero {
+    text-align: center;
+  }
+  .image-square-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+  .contact-container {
+    grid-template-columns: 1fr; /* Stack panels vertically on smaller screens */
+    padding: 2rem;
+    gap: 2.5rem;
+  }
+
+  .submit-contact-btn {
+    width: 100%; /* Spans button full-width across on mobile screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .image-square-grid {
+    grid-template-columns: 1fr; /* 1 column on small phones */
+  }
+}
