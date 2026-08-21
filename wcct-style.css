@@ -666,6 +666,7 @@ padding-bottom: 50px;
     gap: 2.5rem;
   }
 .contact-map-container {
+    grid-column: span 1; 
     display: flex;         /* Activates Flexbox Layout */
     justify-content: center; /* Centers iframe horizontally */
     align-items: center;     /* Centers iframe vertically */
