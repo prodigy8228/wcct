@@ -374,7 +374,15 @@ footer {
   margin-bottom: 1rem;
   font-weight: 700;
 }
-
+.contact-map-container {
+    grid-column: span 2; 
+    display: flex;         /* Activates Flexbox Layout */
+    justify-content: center; /* Centers iframe horizontally */
+    align-items: center;     /* Centers iframe vertically */
+    width: 100%;
+    margin-top: 1rem;       /* Adds breathing space from row 1 */
+padding-bottom: 50px;
+}
 .contact-info-panel p {
   color: #555555;
   line-height: 1.6;
