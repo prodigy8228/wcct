@@ -665,7 +665,14 @@ padding-bottom: 50px;
     padding: 2rem;
     gap: 2.5rem;
   }
-
+.contact-map-container {
+    display: flex;         /* Activates Flexbox Layout */
+    justify-content: center; /* Centers iframe horizontally */
+    align-items: center;     /* Centers iframe vertically */
+    width: 100%;
+    margin-top: 1rem;       /* Adds breathing space from row 1 */
+padding-bottom: 50px;
+}
   .submit-contact-btn {
     width: 100%; /* Spans button full-width across on mobile screens */
   }
